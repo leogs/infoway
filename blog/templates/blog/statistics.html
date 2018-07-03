@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+	<div class="dropdown">
+		<button class="dropbtn">Dropdown</button>
+	  	<div class="dropdown-content">
+	    	<a href="#">Link 1</a>
+	    	<a href="#">Link 2</a>
+	    	<a href="#">Link 3</a>
+	  	</div>
+	</div>
+	<center>
+    </br>{{loaded_data | safe}}
+	</br>{{shape}}
+	</br>{{head | safe}}
+</center>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<form name="title" action="{% url 'blog:upload_file' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input id="uploadbutton" type="file" value="Browse" name="file" accept="text/csv" />
+    <input type="submit" value="Upload" />
+</form>
+{% endblock %}
