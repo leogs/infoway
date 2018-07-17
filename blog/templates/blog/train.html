@@ -1,0 +1,13 @@
+{% extends 'blog/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<h4> Algoritmo: {{a}}</h4>
+</br>mean: {{mean}}
+</br>std: {{std}}
+
+</br>accuracy: {{accuracy}}
+</br><img src="{% static 'files/matrix.png' %}" height="449" width="604" alt="My image"/>
+
+</br><img src="{% static 'files/test_plot_classif_report.png' %}" height="357" width="870" alt="My image"/>
+{% endblock %}

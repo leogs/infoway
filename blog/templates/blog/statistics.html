@@ -1,17 +1,21 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
+<center>
 	<div class="dropdown">
-		<button class="dropbtn">Dropdown</button>
+		<button class="dropbtn">Treinar</button>
 	  	<div class="dropdown-content">
-	    	<a href="#">Link 1</a>
-	    	<a href="#">Link 2</a>
-	    	<a href="#">Link 3</a>
+	    	<a href="{% url 'blog:train' alg='LDA' %}">Linear Discriminant Analysis</a>
+	    	<a href="{% url 'blog:train' alg='KNN' %}">KNeighbors</a>
+	    	<a href="{% url 'blog:train' alg='CART' %}">Decision Tree</a>
 	  	</div>
 	</div>
-	<center>
-    </br>{{loaded_data | safe}}
-	</br>{{shape}}
-	</br>{{head | safe}}
+	</br>
+	</br>
+   	<h4>Número de linhas</h4>
+   	{{shape.0}}
+	</br></br><h4> Colunas antes do pré-processamento:</h4> {{headers}}
+
+	</br></br><h4> Colunas após pré-processamento:</h4> {{new_headers}}
 </center>
 {% endblock %}
